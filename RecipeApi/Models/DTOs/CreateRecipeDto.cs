@@ -27,5 +27,7 @@ public class CreateRecipeDto
     [MinLength(1)]
     public List<string> Instructions { get; set; } = new();
 
+    [Required]
+    [RegularExpression("^(Easy|Medium|Hard)$", ErrorMessage = "Difficulty must be Easy, Medium, or Hard.")]
     public string Difficulty { get; set; } = string.Empty;
 }

@@ -1,6 +1,30 @@
 @RecipeApi_HostAddress = http://localhost:5099
 
-GET {{RecipeApi_HostAddress}}/weatherforecast/
+### Hämta alla recept
+GET {{RecipeApi_HostAddress}}/api/recipes
 Accept: application/json
 
-###
+### Hämta recept by id
+GET {{RecipeApi_HostAddress}}/api/recipes/1
+Accept: application/json
+
+### Skapa recept
+POST {{RecipeApi_HostAddress}}/api/recipes
+Content-Type: application/json
+
+{
+  "name": "Pannkakor",
+  "description": "Klassiska svenska pannkakor",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 4,
+  "difficulty": "Easy",
+  "ingredients": [
+    { "name": "Mjöl", "quantity": 3, "unit": "dl" },
+    { "name": "Mjölk", "quantity": 6, "unit": "dl" }
+  ],
+  "instructions": [
+    "Blanda ingredienserna",
+    "Stek pannkakorna"
+  ]
+}
