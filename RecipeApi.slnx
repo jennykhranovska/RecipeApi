@@ -1,4 +1,6 @@
 <Solution>
-  <Project Path="RecipeApi.Tests/RecipeApi.Tests.csproj" />
+  <Project Path="RecipeApi.Tests/RecipeApi.Tests.csproj">
+    <Build Solution="Debug|*" Project="true" />
+  </Project>
   <Project Path="RecipeApi/RecipeApi.csproj" />
 </Solution>
