@@ -1,4 +1,5 @@
-﻿namespace RecipeApi.Services
+﻿
+namespace RecipeApi.Services
 {
     public class RecipeService
     {
